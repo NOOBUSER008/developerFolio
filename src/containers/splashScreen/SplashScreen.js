@@ -10,7 +10,7 @@ export default function SplashScreen() {
     <div className={isDark ? "dark-mode splash-container" : "splash-container"}>
       <div className="splash-animation-container">
         <video autoPlay loop muted className="infinity-loader">
-          <source src="/DevOps%20(2).mp4" type="video/mp4" />
+          <source src="/DevOps.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
