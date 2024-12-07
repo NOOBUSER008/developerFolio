@@ -1,17 +1,19 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import "./Skills.scss";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
-import {illustration, skillsSection} from "../../portfolio";
-import {Fade} from "react-reveal";
+import { illustration, skillsSection } from "../../portfolio";
+import { Fade } from "react-reveal";
 import codingPerson from "../../assets/lottie/codingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Skills() {
-  const {isDark} = useContext(StyleContext);
+  const { isDark } = useContext(StyleContext);
+
   if (!skillsSection.display) {
     return null;
   }
+
   return (
     <div className={isDark ? "dark-mode main" : "main"} id="skills">
       <div className="skills-main-div">
@@ -30,9 +32,11 @@ export default function Skills() {
         <Fade right duration={1000}>
           <div className="skills-text-div">
             <h1
-              className={isDark ? "dark-mode skills-heading" : "skills-heading"}
+              className={
+                isDark ? "dark-mode skills-heading" : "skills-heading"
+              }
             >
-              {skillsSection.title}{" "}
+              {skillsSection.title}
             </h1>
             <p
               className={
@@ -43,7 +47,6 @@ export default function Skills() {
             >
               {skillsSection.subTitle}
             </p>
-            <SoftwareSkill />
             <div>
               {skillsSection.skills.map((skills, i) => {
                 return (
@@ -60,6 +63,7 @@ export default function Skills() {
                 );
               })}
             </div>
+            <SoftwareSkill />
           </div>
         </Fade>
       </div>

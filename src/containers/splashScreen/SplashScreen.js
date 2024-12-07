@@ -1,20 +1,19 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import "./SplashScreen.css";
-import DisplayLottie from "../../components/displayLottie/DisplayLottie";
-import {greeting, splashScreen} from "../../portfolio";
+import devopsInfinity from "../../assets/devops-infinity.webp"; // Import your custom loader
+import { greeting } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function SplashScreen() {
-  const {isDark} = useContext(StyleContext);
+  const { isDark } = useContext(StyleContext);
+
   return (
     <div className={isDark ? "dark-mode splash-container" : "splash-container"}>
       <div className="splash-animation-container">
-        <DisplayLottie animationData={splashScreen.animation} />
+        <img src={devopsInfinity} alt="DevOps Infinity Loop" className="infinity-loader" />
       </div>
       <div className="splash-title-container">
-        <span className="grey-color"> &lt;</span>
-        <span className="splash-title">{greeting.username}</span>
-        <span className="grey-color">/&gt;</span>
+        <span className="signature-name">{greeting.username}</span>
       </div>
     </div>
   );

@@ -9,18 +9,13 @@ export default function Footer() {
   return (
     <Fade bottom duration={1000} distance="5px">
       <div className="footer-div">
+        {/* Custom message */}
         <p className={isDark ? "dark-mode footer-text" : "footer-text"}>
-          {emoji("Made with ❤️ by DeveloperFolio Team")}
+          {emoji("Crafted with ❤️ by Phani Mathangi")}
         </p>
+        {/* Optional additional details */}
         <p className={isDark ? "dark-mode footer-text" : "footer-text"}>
-          Theme by{" "}
-          <a
-            href="https://github.com/saadpasta/developerFolio"
-            target="_blank"
-            rel="noreferrer"
-          >
-            developerFolio
-          </a>
+          © 2024 Phani Mathangi. All rights reserved.
         </p>
       </div>
     </Fade>

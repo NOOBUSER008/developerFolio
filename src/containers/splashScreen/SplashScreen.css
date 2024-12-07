@@ -1,23 +1,50 @@
+/* Import the Agustina Regular font */
+@font-face {
+  font-family: "Agustina Regular";
+  src: url("../../assets/fonts/Agustina.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .splash-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh; /* Full-screen height */
+  background-color: #0b132b; /* Dark background */
 }
 
 .splash-animation-container {
-  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px; /* Adjust to your loader size */
+  height: 150px;
+}
+
+.infinity-loader {
+  width: 100%;
+  height: auto;
+  /* No rotation animation for static loader */
 }
 
 .splash-title-container {
-  font-size: 2.5rem;
-  text-decoration: none;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.splash-title {
-  font-family: "Agustina Regular", cursive;
+
+.signature-name {
+  font-family: "Agustina Regular", cursive; /* Use the Agustina font */
+  font-size: 36px; /* Adjust size as needed */
+  color: #ffffff; /* White text for better contrast */
+  text-align: center;
   font-weight: bold;
-  font-variant-ligatures: no-common-ligatures;
-  -webkit-font-variant-ligatures: no-common-ligatures;
-  padding: 0 20px;
+  padding: 0 20px; /* Add padding for a balanced look */
+}
+
+.grey-color {
+  color: #b0b0b0; /* Lighter gray for additional elements if needed */
 }

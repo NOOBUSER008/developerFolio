@@ -1,31 +1,89 @@
-@import "../../_globalColor";
+.scrolling-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--background-color);
+  padding: 20px 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Adjust the gap between rows */
+}
 
-.dev-icons {
-  padding-left: 0;
-  list-style: none;
-  font-size: 3rem;
-  margin-bottom: 0px;
-  margin-top: 0px;
+.row {
+  display: flex;
+  gap: 10px; /* Space between tools in a single row */
+  animation: scroll-horizontal 50s linear infinite; /* Adjust speed */
+  will-change: transform; /* Optimize animation performance */
+}
+
+.row::after {
+  content: ""; /* Creates seamless looping effect */
+  display: block;
+  flex: none; /* Prevents shrinking */
+  width: 100%; /* Equal to one full iteration of the row */
+}
+
+.row:nth-child(2) {
+  animation: scroll-horizontal-reverse 50s linear infinite;
+  animation-delay: -15s; /* Offset the second row for variety */
+}
+
+.tool {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  background: var(--card-gradient);
+  border-radius: 12px;
   text-align: center;
+  color: var(--text-color);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  flex-shrink: 0; /* Prevent tools from shrinking */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 8px;
+    border-radius: 20%;
+    background-color: var(--image-background);
+    padding: 10px;
+  }
+
+  p {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.6);
+  }
 }
 
-.software-skill-inline {
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 20px;
+/* Smooth scrolling animations */
+@keyframes scroll-horizontal {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-420%);
+  }
 }
 
-.software-skill-inline > i {
-  color: $subTitle;
-}
-
-.software-skill-inline > i:hover {
-  color: $skillsColor;
-}
-.software-skill-inline > p {
-  color: $subTitle;
-  font-size: 10px;
-}
-.software-skill-inline > i:hover ~ p {
-  color: $skillsColor;
+@keyframes scroll-horizontal-reverse {
+  from {
+    transform: translateX(-420%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
