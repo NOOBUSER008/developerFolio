@@ -1,37 +1,69 @@
-/* Import the Agustina Regular font */
-@font-face {
-  font-family: "Agustina Regular";
-  src: url("../../assets/fonts/Agustina.woff") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 .splash-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Arrange video and username vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
   height: 100vh; /* Full-screen height */
-  background-color: #0b132b; /* Dark background */
+  background-color: rgba(0, 30, 50, 255); /* Updated background color */
 }
 
 .splash-animation-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px; /* Adjust to your loader size */
-  height: 150px;
+  width: 100%; /* Full width */
+  max-width: 150px; /* Set video size */
+  height: auto; /* Adjust height automatically */
 }
 
 .infinity-loader {
-  width: 100%;
-  height: auto;
-  /* No rotation animation for static loader */
+  width: 100%; /* Ensure the video takes up the container width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the video is fully visible */
 }
 
 .splash-title-container {
-  margin-top: 20px;
-  display: flex;
+  margin-top: 30px; /* Professional gap between video and username */
+  display: flex;.splash-container {
+    display: flex;
+    flex-direction: column; /* Arrange video and username vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Full-screen height */
+    background-color: #001E32; /* Exact background color from the video */
+  }
+  
+  .splash-animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width */
+    max-width: 150px; /* Set video size */
+    height: auto; /* Adjust height automatically */
+  }
+  
+  .infinity-loader {
+    width: 100%; /* Ensure the video takes up the container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the video is fully visible */
+  }
+  
+  .splash-title-container {
+    margin-top: 30px; /* Professional gap between video and username */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .signature-name {
+    font-family: "Agustina Regular", cursive; /* Use the Agustina font */
+    font-size: 36px; /* Adjust size as needed */
+    color: #ffffff; /* White text for better contrast */
+    text-align: center;
+    font-weight: bold;
+    padding: 0 20px; /* Add padding for a balanced look */
+  }
+  
   justify-content: center;
   align-items: center;
 }
@@ -43,8 +75,4 @@
   text-align: center;
   font-weight: bold;
   padding: 0 20px; /* Add padding for a balanced look */
-}
-
-.grey-color {
-  color: #b0b0b0; /* Lighter gray for additional elements if needed */
 }

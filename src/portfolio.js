@@ -261,7 +261,7 @@ const bigProjects = {
   subtitle: "Major Product based Projects that I have been worked",
   projects: [
     {
-      image: require("./assets/images/redorange-logo.jpg"),
+      image: require("./assets/images/redorange-logo.png"),
       projectName: "redOrange.ai",
       projectDesc: "RedOrange.ai is an AI-powered platform that helps businesses manage data protection compliance by automating the process of gathering and securing data",
       footerLink: [
@@ -272,7 +272,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/lisha-logo.jpg"),
+      image: require("./assets/images/lisha-logo.png"),
       projectName: "lisha.ai",
       projectDesc: "Lisha.ai is an AI-powered compliance assistant designed to help Data Protection Officers (DPOs) and IT Auditors efficiently manage cyber compliance. It offers expert guidance across various frameworks, including ISO 27001, GDPR, NIS 2, and DORA, acting as a comprehensive compliance co-pilot",
       footerLink: [
