@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./SplashScreen.css";
-import devopsInfinity from "../../assets/devops-infinity.webp"; // Import your custom loader
+import devopsInfinity from "../../assets/devops-infinity.gif"; // Import your custom loader
 import { greeting } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
